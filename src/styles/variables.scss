@@ -1,10 +1,13 @@
+$black: #000;
 $dark-text: rgb(51, 51, 51);
 $light-text: rgb(158, 158, 158);
 $orange-text: rgb(255, 152, 0);
 
-$light-background: #ffffff;
+$light-background: #fff;
 $dark-background: #202329;
 
 $card-title: rgb(245, 245, 245);
 $card-background: rgb(51, 51, 51);
-$card-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+$card-shadow: 0 2px 2px 0 rgba($black, .16), 0 0 0 1px rgba($black, .08);
+
+$opacity-background: rgba($dark-background, .5);

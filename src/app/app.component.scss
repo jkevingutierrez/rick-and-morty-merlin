@@ -60,7 +60,7 @@
       }
 
       .h5 {
-        background-color: rgba($dark-background, .5);
+        background-color: $opacity-background;
         bottom: 0;
         color: $light-text;
         font-size: 1.5rem;
