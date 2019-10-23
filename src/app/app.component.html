@@ -1,14 +1,14 @@
-<div class="title">
-  <h1>Rick and Morty</h1>
+<div class="title__container">
+  <h1 class="h1">Rick and Morty</h1>
   <div>
-    <h3>Hey, did you ever want to hold a Terry fold?</h3>
+    <h3 class="h3">Hey, did you ever want to hold a Terry fold?</h3>
   </div>
 </div>
 <div class="app">
   <article class="app__card" *ngFor="let element of elements">
     <div class="app__card__header">
-      <img src="{{ element.image }}" alt="{{ element.name }}">
-      <h5>{{ element.name }}</h5>
+      <img class="image" src="{{ element.image }}" alt="{{ element.name }}">
+      <h5 class="h5">{{ element.name }}</h5>
     </div>
     <div class="app__card__main">
       <div class="app__card__element">

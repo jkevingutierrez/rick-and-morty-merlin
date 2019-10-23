@@ -25,14 +25,14 @@ export class AppComponent implements OnInit {
 
     this.elements$.subscribe((elements) => {
       this.elements = elements.sort((a: any, b: any) => {
-        const latestEpisodeA = a.episode[a.episode.length - 1];
-        const latestEpisodeB = b.episode[b.episode.length - 1];
+        const latestEpisodeUrlA = a.episode[a.episode.length - 1];
+        const latestEpisodeUrlB = b.episode[b.episode.length - 1];
 
-        const arrayA = latestEpisodeA.split('/');
-        const arrayB = latestEpisodeB.split('/');
+        const episodeUrlArrayA = latestEpisodeUrlA.split('/');
+        const episodeUrlArrayB = latestEpisodeUrlB.split('/');
 
-        const latestEpisodeANumber = Number(arrayA[arrayA.length - 1]);
-        const latestEpisodeBNumber = Number(arrayB[arrayB.length - 1]);
+        const latestEpisodeANumber = Number(episodeUrlArrayA[episodeUrlArrayA.length - 1]);
+        const latestEpisodeBNumber = Number(episodeUrlArrayB[episodeUrlArrayB.length - 1]);
 
         return latestEpisodeANumber > latestEpisodeBNumber ? -1 : 1;
       });

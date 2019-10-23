@@ -1,41 +1,33 @@
-@import './styles/variables';
+@import '../styles/variables';
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-size: 12px;
-}
-
-.title {
+.title__container {
+  margin-bottom: 1vw;
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 1vw;
 
-  h1 {
+  .h1 {
     font-size: 3rem;
+    line-height: .7;
     margin-bottom: 0;
-    line-height: 0.8;
   }
 
-  h3 {
-    margin: 0;
-    position: relative;
-    padding: 0 10px;
-    display: inline-block;
+  .h3 {
     color: $orange-text;
+    display: inline-block;
+    margin: 0;
+    padding: 0 .694vw;
+    position: relative;
 
     &::before {
       background-color: $dark-background;
-      transform: skew(-0.06turn, 0);
+      bottom: 0;
       content: '';
-      position: absolute;
+      height: 100%;
       left: 0;
+      position: absolute;
       right: 0;
       top: 0;
-      bottom: 0;
-      height: 100%;
+      transform: skew(-.06turn, 0);
       width: 100%;
       z-index: -1;
     }
@@ -43,51 +35,54 @@ body {
 }
 
 .app {
-  background: $dark-background;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
   align-content: center;
-  justify-content: center;
+  background-color: $dark-background;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   margin: 0 auto;
-  padding: 10px;
-  width: 1440px;
+  max-width: 1440px;
+  padding: .694vw;
 
   &__card {
-    background: $card-background;
-    box-shadow: $card-shadow;
-    width: calc(33% - 10px);
-    padding: 10px;
-    margin: 5px;
+    background-color: $card-background;
     border-radius: 3%;
+    box-shadow: $card-shadow;
+    margin: .347vw;
+    padding: .694vw;
+    width: calc(33% - .694vw);
 
     &__header {
       position: relative;
 
-      & > img {
+      .image {
         width: 100%;
       }
 
-      & > h5 {
-        position: absolute;
+      .h5 {
+        background-color: rgba($dark-background, .5);
         bottom: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        margin: auto;
-        background: rgba($dark-background, .5);
-        padding: 10px;
         color: $light-text;
         font-size: 1.5rem;
+        left: 0;
+        margin: auto;
+        padding: .694vw;
+        position: absolute;
+        right: 0;
+        width: 100%;
       }
     }
 
+    &__main {
+      height: 100%;
+    }
+
     &__element {
-      display: flex;
       align-items: center;
-      flex-wrap: wrap;
+      display: flex;
       flex-direction: row;
-      padding: 10px 0;
+      flex-wrap: wrap;
+      padding: .694vw 0;
 
       &:not(:last-child) {
         border-bottom: 1px solid $light-text;
@@ -95,14 +90,14 @@ body {
     }
 
     &__row {
-      width: 50%;
-      flex-basis: 50%;
       color: $orange-text;
+      flex-basis: 50%;
       text-align: right;
+      width: 50%;
 
       &--title {
-        text-align: left;
         color: $light-text;
+        text-align: left;
       }
     }
   }
