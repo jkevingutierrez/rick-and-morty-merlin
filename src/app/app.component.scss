@@ -1,0 +1,109 @@
+@import './styles/variables';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 12px;
+}
+
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 1vw;
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 0;
+    line-height: 0.8;
+  }
+
+  h3 {
+    margin: 0;
+    position: relative;
+    padding: 0 10px;
+    display: inline-block;
+    color: $orange-text;
+
+    &::before {
+      background-color: $dark-background;
+      transform: skew(-0.06turn, 0);
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+    }
+  }
+}
+
+.app {
+  background: $dark-background;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 10px;
+  width: 1440px;
+
+  &__card {
+    background: $card-background;
+    box-shadow: $card-shadow;
+    width: calc(33% - 10px);
+    padding: 10px;
+    margin: 5px;
+    border-radius: 3%;
+
+    &__header {
+      position: relative;
+
+      & > img {
+        width: 100%;
+      }
+
+      & > h5 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        margin: auto;
+        background: rgba($dark-background, .5);
+        padding: 10px;
+        color: $light-text;
+        font-size: 1.5rem;
+      }
+    }
+
+    &__element {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      flex-direction: row;
+      padding: 10px 0;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $light-text;
+      }
+    }
+
+    &__row {
+      width: 50%;
+      flex-basis: 50%;
+      color: $orange-text;
+      text-align: right;
+
+      &--title {
+        text-align: left;
+        color: $light-text;
+      }
+    }
+  }
+}
